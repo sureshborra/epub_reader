@@ -1,0 +1,17 @@
+<div class="library-container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="library-title">My Library</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="card book_card  "  *ngFor="let book of books">
+      <img class="card-img-top" src="{{ book.image }}" (click)="onTitleSelect( book.id)">
+      <!-- <div class="card-body">
+        <h5 class="card-title">{{ book.title }}</h5>        
+      </div> -->
+    </div>
+ 
+
+  </div>
+</div>

@@ -1,0 +1,25 @@
+
+ 
+  <div class="reader-container" [ngClass]="{'nav-open' : navOpen}">
+  <div id="titlebar">
+    <div id="metainfo">
+      <span id="book-title">{{ bookTitle + (chapterTitle === bookTitle ? '' : ' - ' + chapterTitle) }}</span>
+      <span id="title-seperator">&nbsp;&nbsp;–&nbsp;&nbsp;</span>
+      <span id="chapter-title"></span>
+    </div>
+  </div> 
+  <div id="viewer"  #scrollMe [scrollTop]="scrollMe.scrollHeight" ></div>
+</div>
+
+
+
+
+   
+<div class="reader_page_settings gopage_btn"  >
+<input placeholder="Page" type="text" #pg_num (change)="0">
+<button  (click)="go_page(pg_num.value)">Go</button>
+</div>
+
+
+<button type="button" class="btn btn-ebook " aria-label="Close" (click)="onSubscribeClick()">Back</button>
+ 
